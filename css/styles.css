@@ -142,13 +142,79 @@ section {
     background-color: #0056b3;
 }
 
-/* Project Details - Initially Hidden */
-.project-details {
-    display: none;
-    margin-top: 10px;
-    padding: 10px;
-    background-color: #f8f9fa;
-    border-left: 4px solid #007BFF;
+/* Project Details Section */
+#project-details {
+    width: 100%;
+    text-align: center;
+    padding: 50px 20px;
+    display: none; /* Initially hidden */
+}
+
+/* Background Colors for Each Project */
+#project-details.web-design {
+    background: linear-gradient(to bottom, #5fa5e2, #b6caee); /* Light Blue */
+}
+
+#project-details.web-hosting {
+    background: linear-gradient(to bottom, #fef4e5, #ffffff); /* Light Orange */
+}
+
+#project-details.content-creation {
+    background: linear-gradient(to bottom, #6bf16b, #cee0d0); /* Light Green */
+}
+
+/* Title Styling */
+#project-details h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Image Container */
+.details-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+/* Image Styling */
+.details-images img {
+    width: 30%;
+    max-width: 300px;
+    border-radius: 10px;
+    transition: transform 0.5s ease;
+}
+
+/* Hover Effect */
+.details-images img:hover {
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1) rotate(3deg);
+}
+
+/* Project Description */
+#details-description {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .details-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details-images img {
+        width: 80%;
+    }
 }
 
 /* Responsive: Stacks on smaller screens */
@@ -162,6 +228,7 @@ section {
         max-width: 100%;
     }
 }
+
 
 /*=================== Project Section ENDS============== */
 
