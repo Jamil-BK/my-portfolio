@@ -1,4 +1,9 @@
 /* General Styles */
+html {
+    font-size: 16px; /* Sets base size for rem calculations */
+}
+
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -95,6 +100,184 @@ section {
 }
 
 
+/* Contact Form Section */
+#contact {
+    background-color: #04053d;
+    padding: 80px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Contact Section Box */
+.section-contact {
+    background-color: #5123cf;
+    padding: 50px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Form Header */
+.section-contact .header-section .title {
+    font-weight: 700;
+    font-size: 1.875rem; /* Text uses rem */
+    color: #eb7100;
+}
+
+.section-contact .header-section .hello {
+    color: #ffde17;
+}
+
+/* Contact Form Fields */
+.form-contact {
+    margin-top: 20px;
+}
+
+.single-input {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Icon Styling */
+.single-input i {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    color: #de3842;
+    font-size: 1.25rem; /* Rem for text */
+    transform: translateY(-50%);
+}
+
+/* Input and Textarea */
+.single-input input
+ {
+    width: 95%;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 35px; /* Px for spacing */
+    padding-right: 0px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: white;
+    outline: none;
+    border: 2px solid #4C0822;
+    transition: 0.3s ease-in-out;
+}
+
+
+/* Fix Textarea Alignment */
+.single-input textarea {
+    width: 95%;
+    padding: 15px 35px; /* Px for spacing */
+    padding-right: 0px;
+    height: 120px;
+    resize: none;
+    padding-top: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    background: white;
+    outline: none;
+    border: 2px solid #4C0822;
+    transition: 0.3s ease-in-out;
+}
+
+#msg {
+    top: 15%;
+}
+
+/* Error Message Styling */
+.error {
+    color: red !important; /* Ensures error text is red */
+    font-size: 0.875rem;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Placeholder and Focus Effects */
+.single-input input::placeholder,
+.single-input textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Submit Button */
+.submit-input {
+    text-align: center;
+}
+
+.submit-input .btn-contact {
+    background-color: #f9ca0f;
+    color: rgb(95, 4, 4);
+    border: none;
+    font-weight: 700;
+    padding: 12px 30px; /* Px for precise button size */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: inline-block;
+    width: 50%; /* % to make it responsive */
+}
+
+.submit-input .btn-contact:hover {
+    background-color: #a66dbe;
+}
+
+/* =========================== */
+/* 📱 Responsive Design */
+
+/* Small Screens (Mobile) */
+@media only screen and (max-width: 600px) {
+    .section-contact {
+        padding: 30px;
+        width: 90%;
+    }
+
+    .single-input input,
+    .single-input textarea {
+        font-size: 0.875rem;
+        padding-left: 35px;
+    }
+
+    .single-input i {
+        font-size: 1rem;
+        left: 10px;
+    }
+
+    .submit-input .btn-contact {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media only screen and (max-width: 768px) {
+    .section-contact {
+        padding: 40px;
+        width: 85%;
+    }
+
+    .single-input input,
+    .single-input textarea {
+        font-size: 1rem;
+        padding-left: 40px;
+    }
+
+    .single-input i {
+        font-size: 1.0625rem;
+        left: 12px;
+    }
+}
+
+/* Large Screens */
+@media only screen and (min-width: 1024px) {
+    .section-contact {
+        max-width: 700px;
+        padding: 60px;
+    }
+}
+
+/* CONTACT SECTION ENDS */
 
 
 #about {

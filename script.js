@@ -44,3 +44,89 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+
+// Contact Form Section
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get form and input elements
+    const form = document.getElementById("contactForm");
+
+    const nameInput = document.getElementById("Name");
+    const emailInput = document.getElementById("Sender");
+    const subjectInput = document.getElementById("Subject");
+    const messageInput = document.getElementById("Message");
+
+    // Create error spans dynamically
+    createErrorSpan(nameInput, "nameError");
+    createErrorSpan(emailInput, "emailError");
+    createErrorSpan(subjectInput, "subjectError");
+    createErrorSpan(messageInput, "messageError");
+
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    const subjectError = document.getElementById("subjectError");
+    const messageError = document.getElementById("messageError");
+
+    form.addEventListener("submit", function (event) {
+        // Clear previous error messages
+        nameError.textContent = "";
+        emailError.textContent = "";
+        subjectError.textContent = "";
+        messageError.textContent = "";
+
+        let isValid = true;
+
+        // Validate Name
+        if (nameInput.value.trim() === "") {
+            nameError.textContent = "Please enter your name";
+            isValid = false;
+        }
+
+        // Validate Email
+        if (emailInput.value.trim() === "") {
+            emailError.textContent = "Please enter your email";
+            isValid = false;
+        } else if (!validateEmail(emailInput.value)) {
+            emailError.textContent = "Please enter a valid email address";
+            isValid = false;
+        }
+
+        // Validate Subject
+        if (subjectInput.value.trim() === "") {
+            subjectError.textContent = "Please enter a subject";
+            isValid = false;
+        }
+
+        // Validate Message
+        if (messageInput.value.trim() === "") {
+            messageError.textContent = "Please enter your message";
+            isValid = false;
+        }
+
+        // If form is not valid, prevent submission
+        if (!isValid) {
+            event.preventDefault();
+        } else {
+            alert("Thank you! Your message has been sent successfully.");
+            form.reset();
+        }
+    });
+
+    // Function to validate email format
+    function validateEmail(email) {
+        const re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        return re.test(String(email));
+    }
+
+    // Function to create an error span if not already present
+    function createErrorSpan(inputField, errorId) {
+        if (!document.getElementById(errorId)) {
+            const errorSpan = document.createElement("span");
+            errorSpan.classList.add("error");
+            errorSpan.id = errorId;
+            inputField.parentElement.appendChild(errorSpan);
+        }
+    }
+});
