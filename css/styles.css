@@ -67,16 +67,67 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#about {
+    background-color: #b7d3e7;
+}
+
+#projects {
+    background-color: #fbe9e7;
+}
+
+#contact {
+    background-color: #e8f5e9;
+}
+
+#about h2, #contact h2,
+#projects h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#contact h2 {
+    color: white;
+}
 /*Project Section */
-/* Project Section Styling */
+/* Projects Section */
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
 .project {
     background-color: #ffffff;
     padding: 15px;
-    margin: 15px 0;
+    flex: 1;
+    min-width: 300px; /* Prevents too small elements */
+    max-width: 32%; /* Ensures three equal columns */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
+/* Heading Styling */
+.project h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Project Image Styling */
+.project img {
+    width: 50%;  /* Reduced to half of the previous size */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Button Styling */
 .toggle-btn {
     background-color: #007BFF;
     color: white;
@@ -91,14 +142,28 @@ section {
     background-color: #0056b3;
 }
 
+/* Project Details - Initially Hidden */
 .project-details {
-    display: none; /* Initially hidden */
+    display: none;
     margin-top: 10px;
     padding: 10px;
     background-color: #f8f9fa;
     border-left: 4px solid #007BFF;
 }
 
+/* Responsive: Stacks on smaller screens */
+@media only screen and (max-width: 900px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        max-width: 100%;
+    }
+}
+
+/*=================== Project Section ENDS============== */
 
 /* Contact Form Section */
 #contact {
@@ -279,18 +344,6 @@ section {
 
 /* CONTACT SECTION ENDS */
 
-
-#about {
-    background-color: #b7d3e7;
-}
-
-#projects {
-    background-color: #fbe9e7;
-}
-
-#contact {
-    background-color: #e8f5e9;
-}
 
 /* Footer Styles */
 .footer-text {
