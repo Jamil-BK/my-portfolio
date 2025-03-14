@@ -29,7 +29,12 @@ header, footer {
     width: 100%;
     height: auto;
     object-fit: cover;
-    max-height: 300px;
+    max-height: 450px;
+}
+
+p {
+    font-size: 1.5rem; /* Default for laptops/desktops */
+    line-height: 1.7; /* Improve readability */
 }
 
 /* Navigation */
@@ -46,15 +51,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(255, 226, 60);
     text-decoration: none;
-    font-size: 1em;
+    font-size: 1.5em;
     font-weight: bold;
-    padding: 10px;
+    padding: 30px;
 }
 
 nav ul li a:hover {
-    color: #f4b400;
+    color: #d82323;
     text-decoration: underline;
 }
 
@@ -89,7 +94,8 @@ section {
 #contact h2 {
     color: white;
 }
-/*Project Section */
+
+
 /* Projects Section */
 .projects-container {
     display: flex;
@@ -204,31 +210,6 @@ section {
     line-height: 1.6;
     font-weight: 500;
 }
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .details-images {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .details-images img {
-        width: 80%;
-    }
-}
-
-/* Responsive: Stacks on smaller screens */
-@media only screen and (max-width: 900px) {
-    .projects-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .project {
-        max-width: 100%;
-    }
-}
-
 
 /*=================== Project Section ENDS============== */
 
@@ -352,62 +333,9 @@ section {
 }
 
 .submit-input .btn-contact:hover {
-    background-color: #a66dbe;
+    background-color: #e5e2f3;
 }
 
-/* =========================== */
-/* 📱 Responsive Design */
-
-/* Small Screens (Mobile) */
-@media only screen and (max-width: 600px) {
-    .section-contact {
-        padding: 30px;
-        width: 90%;
-    }
-
-    .single-input input,
-    .single-input textarea {
-        font-size: 0.875rem;
-        padding-left: 35px;
-    }
-
-    .single-input i {
-        font-size: 1rem;
-        left: 10px;
-    }
-
-    .submit-input .btn-contact {
-        width: 100%;
-        padding: 12px;
-    }
-}
-
-/* Medium Screens (Tablets) */
-@media only screen and (max-width: 768px) {
-    .section-contact {
-        padding: 40px;
-        width: 85%;
-    }
-
-    .single-input input,
-    .single-input textarea {
-        font-size: 1rem;
-        padding-left: 40px;
-    }
-
-    .single-input i {
-        font-size: 1.0625rem;
-        left: 12px;
-    }
-}
-
-/* Large Screens */
-@media only screen and (min-width: 1024px) {
-    .section-contact {
-        max-width: 700px;
-        padding: 60px;
-    }
-}
 
 /* CONTACT SECTION ENDS */
 
@@ -435,66 +363,336 @@ section {
 }
 
 
+/* =========================== */
+/* 📱 Final Responsive Design Fixes */
 
-
-/* ============================= */
-/* Media Queries for Small Screens */
+/* Mobile View (max-width: 600px) */
 @media only screen and (max-width: 600px) {
-    /* Fix Video Size */
-    .header-video {
-        max-height: 250px;
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+
+    /* Adjust header */
+    header {
+        padding: 15px;
     }
 
+    .header-video {
+        max-height: 250px; /* Increase height */
+        height: 25vh; 
+        object-fit: cover; /* Ensure it covers the space properly */
+    }
+
+    /* Reduce title size */
+    .site-title {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.95rem; /* Slightly smaller for mobile */
+        line-height: 1.3;
+    }
+
+
+    /* Navigation - Make inline */
     nav ul {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+        padding: 8px;
     }
 
     nav ul li {
-        display: block;
-        margin: 5px 0;
+        display: inline-block;
+        margin: 0;
     }
 
-    /* Section Spacing */
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 5px 8px;
+    }
+
+    .projects-container {
+        display: flex;
+        flex-direction: column; /* Stack projects */
+        align-items: center; /* Center boxes */
+    }
+    .project {
+        max-width: 90%; /* Adjust width */
+        margin: 10px auto; /* Centering with margin */
+    }
+    
+    .project h3 {
+        font-size: 1.3rem; /* Smaller than default */
+        text-align: center; /* Keep it centered */
+    }
+    
+    
+
+    /* Reduce Headings Size & Padding */
+    #about h2, #projects h2, #contact h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    /* Adjust Sections for Spacing */
     section {
         padding: 15px;
         margin: 10px;
     }
 
-    /* Footer Layout */
+    #project-details {
+        text-align: center; /* Center everything */
+        width: 100%;
+        box-sizing: border-box;
+        padding: 30px 10px; /* Reduce padding */
+    }
+    #project-details h2 {
+        font-size: 1.5rem; /* Reduce title size */
+        margin-bottom: 15px;
+    }
+    .details-images {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .details-images {
+        display: flex;
+        justify-content: center; /* Centers images */
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%; /* Ensures it does not exceed the container */
+        margin: 0 auto; /* Fixes centering */
+        padding: 0; /* Removes unnecessary padding */
+    }
+    
+
+    #details-description {
+        font-size: 1rem; /* Reduce text size */
+        line-height: 1.5; /* Improve readability */
+        max-width: 90%;
+        margin: auto;
+    }
+    
+    .details-images img {
+        margin-bottom: 10px; /* Adds spacing */
+    }
+    
+
+    #contact, .section-contact {
+            width: 100%;
+            max-width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    
+        /* Adjust Input Fields & Textarea */
+        .single-input input,
+        .single-input textarea {
+            width: 100%;
+            font-size: 14px; /* Reduce font size */
+            padding: 12px 40px; /* Space for icon */
+            border-radius: 0px !important; /* Remove border radius */
+        }
+    
+        /* Ensure Full-Width Button */
+        .submit-input .btn-contact {
+            width: 100%; /* Full width */
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 5px; /* Consistent with design */
+        }
+    
+    
+
+    /* Footer Fixes */
     .footer {
-        padding: 10px;
+        padding: 15px;
         text-align: center;
-        position: relative;
     }
 
     .footer-text {
-        font-size: 1em;
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
     }
 
     .social-icons a {
-        font-size: 1.25em;
-        margin: 5px;
+        font-size: 1.25rem;
     }
 }
 
-/* ============================= */
-/* Media Queries for Tablets */
+
+
+
+
+/* Tablet View (max-width: 768px) */
 @media only screen and (max-width: 768px) {
+
+    * {
+        box-sizing: border-box;
+    }
+    
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden; /* Prevents horizontal scroll */
+    }
+    
+    
+    .header-video {
+            max-height: 350px;
+            height: 35vh;
+        }
+        
+   
+        p {
+            font-size: 1rem; /* Adjust for tablets */
+            line-height: 1.3;
+        }
+
     nav ul {
-        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
     }
 
-    nav ul li {
-        margin: 5px 0;
+    nav ul li a {
+        font-size: 1rem; /* Slightly larger for tablets */
+        padding: 6px 12px;
     }
+
+    /* Adjust header size */
+    .site-title {
+        font-size: 1.75rem;
+    }
+
+
+    .projects-container {
+        display: flex;
+        flex-wrap: wrap; /* Allows wrapping */
+        justify-content: center; /* Centers content */
+        gap: 15px; /* Small gap between projects */
+    }
+    .project {
+        flex: 1 1 45%; /* Two columns (about 45% width each) */
+        max-width: 45%;
+        text-align: center;
+    }
+    
+    .project h3 {
+        font-size: 1.25rem; /* Slightly larger than mobile */
+        text-align: center;
+    }
+    
+
+    #project-details {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    
+    #project-details h2 {
+        font-size: 1.25rem; /* Slightly larger title for tablets */
+        margin-bottom: 10px;
+    }
+  
+    .details-images {
+        display: flex;
+        justify-content: center; /* Centers images */
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%; /* Ensures it does not exceed the container */
+        margin: 0 auto; /* Fixes centering */
+        padding: 0; /* Removes unnecessary padding */
+    }
+    
+
+    .details-images img {
+        width: 65%; /* Keeps two images per row */
+        max-width: 280px;
+        margin-bottom: 15px;
+    }
+    #details-description {
+        font-size: 1rem; /* Text size for better reading */
+        max-width: 80%;
+        margin: auto;
+    }
+    
+ 
+
+    #contact {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .section-contact {
+        width: 100%;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    
+    .single-input i {
+            position: absolute;
+            top: 50%;
+            left: 12px; /* Adjust left position */
+            color: #de3842;
+            font-size: 16px;
+            transform: translateY(-50%);
+        }  
+
+    
+    .single-input input,
+    .single-input textarea {
+        width: 100%; /* Full width */
+        font-size: 14px; /* Reduce font size */
+        padding: 12px 15px; /* Adjust padding */
+    }
+    
+    /* Placeholder text size */
+    .single-input input::placeholder,
+    .single-input textarea::placeholder {
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    
+    /* Add space for icon inside inputs */
+    .single-input input,
+    .single-input textarea {
+        padding-left: 38px !important; /* Space for the icon */
+        border-radius: 0px !important; /* Remove border radius */
+    }
+
 
     .footer-text {
-        font-size: 1em;
+        font-size: 0.75rem;
     }
 
-    .social-icons a {
-        font-size: 1.25em;
-        margin: 5px;
-    }
 }
