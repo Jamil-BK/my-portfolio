@@ -1,4 +1,18 @@
 
+
+//Typed.js Script for Home Section
+
+document.addEventListener("DOMContentLoaded", function () {
+    new Typed("#typed-output", {
+      strings: ["Welcome to My Portfolio"],
+      typeSpeed: 70,
+      backSpeed: 50,
+      backDelay: 3000,
+      loop: true
+    });
+  });
+  
+
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript is properly linked!"); // JS Loaded check
 
@@ -175,3 +189,20 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+
+
+
+// Collapse navbar on link click (for mobile)
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+  
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        if (navbarCollapse.classList.contains("show")) {
+          new bootstrap.Collapse(navbarCollapse).hide();
+        }
+      });
+    });
+  });
+  

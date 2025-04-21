@@ -24,44 +24,75 @@ header, footer {
     padding: 20px;
 }
 
-/* header Video */
-.header-video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    max-height: 450px;
-}
-
 p {
     font-size: 1.5rem; /* Default for laptops/desktops */
     line-height: 1.7; /* Improve readability */
 }
 
 /* Navigation */
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+.navbar {
+    padding: 15px 30px;
+  }
 
-nav ul li {
-    margin: 10px;
-}
+  .custom-navbar {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(6px);
+    padding: 0.75rem 1.5rem;
+  }
+  
+/* ✅ Logo alignment */
+.navbar-brand img {
+    height: 30px;
+  }
+  
 
-nav ul li a {
-    color: rgb(255, 226, 60);
-    text-decoration: none;
-    font-size: 1.5em;
+  .navbar-brand {
+    font-size: 1.8rem;
     font-weight: bold;
-    padding: 30px;
-}
+    color: #ffde17 !important;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff !important;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: #f4b400 !important;
+  }
+  
+  /* ✅ Dewi-style Underline Animation */
+  .navbar-nav .nav-link.underline-hover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #f4b400;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .navbar-nav .nav-link.underline-hover:hover::after {
+    width: 100%;
+  }
+  
+  /* ✅ Fix for mobile nav spacing */
+  .navbar-collapse {
+    text-align: center;
+    background-color: #222; /* Optional: background for mobile menu */
+  }
+  
+  .navbar-toggler {
+    border: none;
+  }
 
-nav ul li a:hover {
-    color: #d82323;
-    text-decoration: underline;
-}
+
+
 
 /* Section Styles */
 section {
@@ -71,6 +102,73 @@ section {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+#home {
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+/* ======= HOME Section ======= */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('../assets/homeimg.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    overflow: hidden;
+  }
+  .hero-section .lead {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: 0;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  
+  .hero-section .container {
+    z-index: 2;
+  }
+  
+  .typed-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:#ebe728;
+    font-weight: 600;
+  }
+  
+  /* Button override */
+  #home .btn {
+    font-weight: bold;
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+
+  .typed-cursor {
+    display: none !important;
+  }
+
+
+/* =========================================  */
 
 #about {
     background-color: #b7d3e7;
