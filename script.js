@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
       strings: ["Welcome to My Portfolio"],
       typeSpeed: 70,
       backSpeed: 50,
-      backDelay: 3000,
+      backDelay: 2000,
       loop: true
     });
   });
@@ -104,7 +104,47 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
+// About Section------------------------ 
+// ✅ About Section: Animate skill bars, logo sparkle, and background color
+document.addEventListener("DOMContentLoaded", function () {
+    const aboutSection = document.querySelector('#about');
+    const skillBars = document.querySelectorAll('.progress-bar.animate-bar');
+    const logo = document.querySelector('.logo-animated');
+  
+    let animated = false;
+  
+    function animateAboutSection() {
+      const sectionTop = aboutSection.offsetTop;
+      const sectionHeight = aboutSection.offsetHeight;
+      const scrollY = window.scrollY + window.innerHeight;
+  
+      // Trigger only when it enters view
+      if (!animated && scrollY > sectionTop + sectionHeight / 4) {
+        aboutSection.classList.add('scrolled');
+  
+        skillBars.forEach(bar => {
+          const target = bar.getAttribute('data-value') || bar.dataset.percent;
+          if (target) bar.style.width = target;
+        });
+  
+        if (logo) logo.classList.add('sparkle');
+        animated = true; // ✅ Trigger only once
+      }
+  
+      // Optional reset on scroll-up (if you want animation every time)
+      // else remove this `else` block entirely
+      else if (animated && scrollY < sectionTop) {
+        aboutSection.classList.remove('scrolled');
+  
+        skillBars.forEach(bar => bar.style.width = '0%');
+        if (logo) logo.classList.remove('sparkle');
+        animated = false;
+      }
+    }
+  
+    window.addEventListener('scroll', animateAboutSection);
+  });
+  
 
 // Contact Form Section
 
@@ -204,5 +244,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
+  });
+  
+
+  // 🔹 Scroll Progress Bar Script
+window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = (scrollTop / docHeight) * 100;
+    document.getElementById("scroll-progress").style.width = scrollPercent + "%";
   });
   
