@@ -54,7 +54,7 @@ p {
     padding: 0.75rem 1.5rem;
   }
   
-/* ✅ Logo alignment */
+/*  Logo alignment */
 .navbar-brand img {
     height: 30px;
   }
@@ -79,7 +79,7 @@ p {
     color: #f4b400 !important;
   }
   
-  /* ✅ Dewi-style Underline Animation */
+
   .navbar-nav .nav-link.underline-hover::after {
     content: "";
     position: absolute;
@@ -106,7 +106,7 @@ p {
   }
 
   
-  /* 🌙 Dark Mode Overrides */
+  /* Dark Mode Overrides */
 body.dark-mode {
     background-color: #1e1e1e;
     color: #f1f1f1;
@@ -520,18 +520,80 @@ section {
     color: #ffffff;
   }
 
+/* ======================<!-- CLIENT SECTION CSS -->============================================================ */
+
+
+/* ============================== CLIENTS SECTION ============================== */
+.client-section {
+    background-color: #b38888;
+    overflow: hidden;
+    position: relative;
+    padding: 60px 0;
+  }
+  
+  .logo-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .logo-track {
+    display: flex;
+    animation: scrollClients 30s linear infinite;
+    gap: 80px; /* 🔄 More spacing between logos */
+    align-items: center;
+    padding: 20px 0;
+  }
+  
+  .client-logo {
+    height: 100px;
+    width: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    filter: grayscale(80%);
+  }
+  
+  .client-logo:hover {
+    transform: scale(1.2);
+    filter: grayscale(0%);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+  }
+  
+  /* Infinite scroll keyframes */
+  @keyframes scrollClients {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .client-logo {
+      height: 70px;
+    }
+  
+    .logo-track {
+      gap: 50px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .client-logo {
+      height: 60px;
+    }
+  
+    .logo-track {
+      gap: 40px;
+    }
+  }
   
 
 
 
-/* ================================================================================== */
-
-
-
-
-
-
-
+/* ========================================================================================== */
 
 
 /* Contact Form Section */

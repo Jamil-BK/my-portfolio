@@ -297,7 +297,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//==========================================================
 
 // =============================Testimonial=================
 
@@ -311,4 +310,16 @@ const carouselElement = document.querySelector('#testimonialCarousel');
     });
   }
 
-// =============================================================
+// ===================Client==========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+    const track = document.querySelector(".logo-track");
+  
+    track.addEventListener("mouseenter", () => {
+      track.style.animationPlayState = "paused";
+    });
+  
+    track.addEventListener("mouseleave", () => {
+      track.style.animationPlayState = "running";
+    });
+  });
