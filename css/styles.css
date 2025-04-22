@@ -105,7 +105,43 @@ p {
     border: none;
   }
 
+  
+  /* 🌙 Dark Mode Overrides */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+  }
+  
+  /* Section backgrounds in dark mode */
+  body.dark-mode section {
+    background-color: #2c2c2c !important;
+  }
+  
+  /* Optional: override cards or containers inside */
+  body.dark-mode .project,
+  body.dark-mode .section-contact,
+  body.dark-mode .skills-section {
+    background-color: #333 !important;
+    color: #f1f1f1;
+  }
+  
+  /* Optional: lighten input fields */
+  body.dark-mode input,
+  body.dark-mode textarea {
+    background-color: #444;
+    color: #f1f1f1;
+    border-color: #666;
+  }
+  
+  /* Optional: darken footer */
+  body.dark-mode footer {
+    background-color: #111;
+    color: #eee;
+  }
+  
 
+
+/* ===========================================  */
 
 
 /* Section Styles */

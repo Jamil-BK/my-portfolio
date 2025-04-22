@@ -255,3 +255,46 @@ window.addEventListener("scroll", () => {
     document.getElementById("scroll-progress").style.width = scrollPercent + "%";
   });
   
+
+
+  //   /=========Dark Mode=============
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.getElementById("darkToggle");
+  const body = document.body;
+
+  // Helper function to update button label and style
+  function updateToggleUI() {
+    if (body.classList.contains("dark-mode")) {
+      toggleBtn.innerHTML = "☀️ Light Mode";
+      toggleBtn.classList.remove("btn-warning");
+      toggleBtn.classList.add("btn-outline-light");
+    } else {
+      toggleBtn.innerHTML = "🌙 Dark Mode";
+      toggleBtn.classList.remove("btn-outline-light");
+      toggleBtn.classList.add("btn-warning");
+    }
+  }
+
+  // Load preference from localStorage
+  if (localStorage.getItem("dark-mode") === "enabled") {
+    body.classList.add("dark-mode");
+  }
+
+  updateToggleUI(); // Set initial state
+
+  toggleBtn.addEventListener("click", function () {
+    body.classList.toggle("dark-mode");
+
+    // Save preference
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("dark-mode", "enabled");
+    } else {
+      localStorage.setItem("dark-mode", "disabled");
+    }
+
+    updateToggleUI(); // Update text and style
+  });
+});
+
+//==========================================================
