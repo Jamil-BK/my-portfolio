@@ -475,6 +475,65 @@ section {
 
 /*=================== Project Section ENDS============== */
 
+
+
+/* ============================== Testimonials================================== */
+.testimonial-section {
+    background-color: #044444;
+    color: white;
+  }
+  .testimonial-card {
+    background-color: #120d63;
+    color: #72944a;
+    padding: 25px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .testimonial-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .testimonial-card:hover {
+    transform: scale(1.05);
+    background-color: #830610;
+  }
+  .testimonial-text {
+    font-size: 1.15rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #e2cece;
+  }
+  .testimonial-author {
+    font-weight: 600;
+    color: #ecf849;
+  }
+  .testimonial-role {
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
+
+  
+
+
+
+/* ================================================================================== */
+
+
+
+
+
+
+
+
+
 /* Contact Form Section */
 #contact {
     background-color: #04053d;

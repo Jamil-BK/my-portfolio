@@ -298,3 +298,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 //==========================================================
+
+// =============================Testimonial=================
+
+const carouselElement = document.querySelector('#testimonialCarousel');
+  if (carouselElement) {
+    carouselElement.addEventListener('mouseenter', () => {
+      bootstrap.Carousel.getInstance(carouselElement).pause();
+    });
+    carouselElement.addEventListener('mouseleave', () => {
+      bootstrap.Carousel.getInstance(carouselElement).cycle();
+    });
+  }
+
+// =============================================================
