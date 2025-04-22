@@ -5,387 +5,555 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jamil Khalil</title>
 
-    <!-- ✅ Main Styles -->
-    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="css/styles.min.css">
 
-    <!-- ✅ Font Awesome for Social Icons -->
+    <!-- Font Awesome for Social Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
 
-    <!-- ✅ Bootstrap 5 CSS -->
+    <!-- Bootstrap 5 CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <!-- ✅ Typed.js Animation Library -->
+    <!-- Typed.js Animation Library -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
-    <!-- ✅ Bootstrap 5 JS Bundle -->
+    <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- ✅ Your Custom Script -->
+    <!-- Your Custom Script -->
     <!-- <script src="script.js" defer></script> -->
-    <script src="script.js?v=2" defer></script>
-
-
+    <script src="script.min.js?v=3" defer></script>
   </head>
 
   <body>
-    <!-- 🔹 Scroll Progress Bar -->
-<div id="scroll-progress"></div>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
     <header class="header fixed-top">
-        <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
-          <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-              <img src="assets/logo.png" alt="Logo" height="30" class="me-2" />
-              <span>Jamil Khalil</span>
-            </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-              <ul class="navbar-nav gap-3">
-                <li class="nav-item">
-                  <a class="nav-link active underline-hover" aria-current="page" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link underline-hover" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link underline-hover" href="#projects">Projects</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link underline-hover" href="#testimonials">Testimonials</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link underline-hover" href="#clients">Our Clients</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link underline-hover" href="#contact">Contact</a>
-                </li>
-                <!-- Dark Mode Toggle Switch -->
-                <div class="d-flex align-items-center ms-3">
-                  <button id="darkToggle" class="btn btn-outline-light btn-sm">🌞 Light Mode</button>
-                </div>
+      <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img
+              src="assets/logo.png"
+              alt="Logo"
+              height="30"
+              class="me-2"
+              loading="lazy"
+            />
+            <span>Jamil Khalil</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav gap-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link active underline-hover"
+                  aria-current="page"
+                  href="#home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline-hover" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline-hover" href="#projects"
+                  >Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline-hover" href="#testimonials"
+                  >Testimonials</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline-hover" href="#clients"
+                  >Our Clients</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link underline-hover" href="#contact">Contact</a>
+              </li>
+              <!-- Dark Mode Toggle Switch -->
+              <div class="d-flex align-items-center ms-3">
+                <button id="darkToggle" class="btn btn-outline-light btn-sm">
+                  🌞 Light Mode
+                </button>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-              </ul>
+    <!-- Home Section -->
+    <section
+      id="home"
+      class="hero-section d-flex align-items-center justify-content-center text-center"
+    >
+      <div class="hero-overlay"></div>
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="assets/video.mp4" type="video/mp4" />
+      </video>
+      <div class="container position-relative z-2 text-white">
+        <h2 id="typed-output" class="typed-text mb-3"></h2>
+        <h1 class="display-4 fw-bold">We Design, We Build</h1>
+        <p class="lead">A creative portfolio for your digital journey.</p>
+        <div class="d-flex justify-content-center mt-4 gap-3 flex-wrap">
+          <a href="#about" class="btn btn-warning px-4 py-2">Learn More</a>
+          <a
+            href="#"
+            class="btn btn-outline-light d-flex align-items-center gap-2"
+            data-bs-toggle="modal"
+            data-bs-target="#videoModal"
+          >
+            <i class="fas fa-play-circle fa-lg"></i> Watch Video
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark">
+          <div class="modal-body p-0">
+            <div class="ratio ratio-16x9">
+              <video id="modalVideo" controls>
+                <source src="assets/video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
-        </nav>
-      </header>
-
-<!-- Home Section -->
-<section id="home" class="hero-section d-flex align-items-center justify-content-center text-center">
-    <div class="hero-overlay"></div>
-    <video autoplay muted loop playsinline class="hero-video">
-      <source src="assets/video.mp4" type="video/mp4">
-    </video>
-    <div class="container position-relative z-2 text-white">
-        <h2 id="typed-output" class="typed-text mb-3"></h2>
-      <h1 class="display-4 fw-bold">We Design, We Build</h1>
-      <p class="lead">A creative portfolio for your digital journey.</p>
-      <div class="d-flex justify-content-center mt-4 gap-3 flex-wrap">
-        <a href="#about" class="btn btn-warning px-4 py-2">Learn More</a>
-        <a href="#" class="btn btn-outline-light d-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#videoModal">
-          <i class="fas fa-play-circle fa-lg"></i> Watch Video
-        </a>
+        </div>
       </div>
     </div>
-  </section>
-  
-  <!-- Video Modal -->
-  <div class="modal fade" id="videoModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content bg-dark">
-        <div class="modal-body p-0">
-          <div class="ratio ratio-16x9">
-            <video id="modalVideo" controls>
-              <source src="assets/video.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <h2 class="text-center mb-5">About Me</h2>
+        <div class="about-container">
+          <!-- Logo -->
+          <div class="about-logo text-center">
+            <img
+              src="assets/logo.png"
+              alt="JK Logo"
+              class="img-fluid logo-animated sparkle"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Text -->
+          <div class="about-text">
+            <p>
+              Welcome to Jamil Khalil's personal portfolio, a showcase of my
+              journey in web design, development, and multimedia production. As
+              a passionate creative and problem solver, I have honed my skills
+              in graphic design, branding, video editing, and web development.
+            </p>
+            <p>
+              My goal is to establish JK Studio, a creative space where I can
+              bring innovative ideas to life and provide high-quality digital
+              solutions to clients. With experience in Adobe Photoshop,
+              Illustrator, After Effects, and coding in HTML, CSS, JavaScript,
+              and more, I specialize in designing user-friendly websites,
+              crafting compelling brand visuals, and delivering professional
+              multimedia content.
+            </p>
+          </div>
+
+          <!-- Skills -->
+          <!-- Skills -->
+          <div class="skills-section">
+            <h5>Skills</h5>
+
+            <div class="skill">
+              <span>HTML</span>
+              <div class="progress">
+                <div class="progress-bar html animate-bar" data-percent="90%">
+                  90%
+                </div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <span>CSS</span>
+              <div class="progress">
+                <div class="progress-bar css animate-bar" data-percent="85%">
+                  85%
+                </div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <span>JavaScript</span>
+              <div class="progress">
+                <div class="progress-bar js animate-bar" data-percent="80%">
+                  80%
+                </div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <span>Video Editing</span>
+              <div class="progress">
+                <div class="progress-bar video animate-bar" data-percent="75%">
+                  75%
+                </div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <span>Photoshop</span>
+              <div class="progress">
+                <div
+                  class="progress-bar photoshop animate-bar"
+                  data-percent="70%"
+                >
+                  70%
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
 
+    <!-- END ABOUT SECTION -->
 
-
-<!-- About Section -->
-<section id="about">
-    <div class="container">
-      <h2 class="text-center mb-5">About Me</h2>
-      <div class="about-container">
-        
-        <!-- Logo -->
-        <div class="about-logo text-center">
-          <img src="assets/logo.png" alt="JK Logo" class="img-fluid logo-animated sparkle" />
-        </div>
-  
-        <!-- Text -->
-        <div class="about-text">
-          <p>
-            Welcome to Jamil Khalil's personal portfolio, a showcase of my journey in web design, development, and multimedia production. As a passionate creative and problem solver, I have honed my skills in graphic design, branding, video editing, and web development.
-          </p>
-          <p>
-            My goal is to establish JK Studio, a creative space where I can bring innovative ideas to life and provide high-quality digital solutions to clients. With experience in Adobe Photoshop, Illustrator, After Effects, and coding in HTML, CSS, JavaScript, and more, I specialize in designing user-friendly websites, crafting compelling brand visuals, and delivering professional multimedia content.
-          </p>
-        </div>
-  
-        <!-- Skills -->
-<!-- Skills -->
-<div class="skills-section">
-    <h5>Skills</h5>
-  
-    <div class="skill">
-      <span>HTML</span>
-      <div class="progress">
-        <div class="progress-bar html animate-bar" data-percent="90%">90%</div>
-      </div>
-    </div>
-  
-    <div class="skill">
-      <span>CSS</span>
-      <div class="progress">
-        <div class="progress-bar css animate-bar" data-percent="85%">85%</div>
-      </div>
-    </div>
-  
-    <div class="skill">
-      <span>JavaScript</span>
-      <div class="progress">
-        <div class="progress-bar js animate-bar" data-percent="80%">80%</div>
-      </div>
-    </div>
-  
-    <div class="skill">
-      <span>Video Editing</span>
-      <div class="progress">
-        <div class="progress-bar video animate-bar" data-percent="75%">75%</div>
-      </div>
-    </div>
-  
-    <div class="skill">
-      <span>Photoshop</span>
-      <div class="progress">
-        <div class="progress-bar photoshop animate-bar" data-percent="70%">70%</div>
-      </div>
-    </div>
-  </div>
-  
-      </div>
-    </div>
-  </section>
-  
-  <!-- ✅ END ABOUT SECTION -->
-   
-  
-
-<!-- Projects Section -->
-<!-- Projects Section -->
-<section id="projects">
-    <h2>My Projects</h2>
-    <div class="projects-container">
-
+    <!-- Projects Section -->
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="projects-container">
         <!-- Project 1 -->
         <div class="project">
-            <h3>Projects: Web Design</h3>
-            <img src="assets/pro1.png" alt="Web Design Project">
-            <p>A modern web design project showcasing creativity and responsiveness.</p>
-            <button class="toggle-btn" data-project="web-design">Read More</button>
+          <h3>Projects: Web Design</h3>
+          <img src="assets/pro1.png" alt="Web Design Project" loading="lazy" />
+          <p>
+            A modern web design project showcasing creativity and
+            responsiveness.
+          </p>
+          <button class="toggle-btn" data-project="web-design">
+            Read More
+          </button>
         </div>
 
         <!-- Project 2 -->
         <div class="project">
-            <h3>Projects: Web Hosting/Maintenance</h3>
-            <img src="assets/pro2.png" alt="Web Hosting Project">
-            <p>Providing hosting solutions and website maintenance services.</p>
-            <button class="toggle-btn" data-project="web-hosting">Read More</button>
+          <h3>Projects: Web Hosting/Maintenance</h3>
+          <img src="assets/pro2.png" alt="Web Hosting Project" loading="lazy" />
+          <p>Providing hosting solutions and website maintenance services.</p>
+          <button class="toggle-btn" data-project="web-hosting">
+            Read More
+          </button>
         </div>
 
         <!-- Project 3 -->
         <div class="project">
-            <h3>Projects: Content Creation</h3>
-            <img src="assets/pro3.png" alt="Content Creation Project">
-            <p>Creating engaging content for digital platforms and marketing.</p>
-            <button class="toggle-btn" data-project="content-creation">Read More</button>
+          <h3>Projects: Content Creation</h3>
+          <img
+            src="assets/pro3.png"
+            alt="Content Creation Project"
+            loading="lazy"
+          />
+          <p>Creating engaging content for digital platforms and marketing.</p>
+          <button class="toggle-btn" data-project="content-creation">
+            Read More
+          </button>
         </div>
+      </div>
+    </section>
 
-    </div>
-</section>
-
-<!-- Project Details Section -->
-<section id="project-details" style="display: none;">
-    <div class="container">
+    <!-- Project Details Section -->
+    <section id="project-details" style="display: none">
+      <div class="container">
         <h2 id="details-title">Project Details</h2>
         <div class="details-content">
-            <div class="details-images">
-                <img id="img1" src="assets/a1.png" alt="Project Image 1">
-                <img id="img2" src="assets/a2.png" alt="Project Image 2">
-                <img id="img3" src="assets/a3.png" alt="Project Image 3">
+          <div class="details-images">
+            <img
+              id="img1"
+              src="assets/a1.png"
+              alt="Project Image 1"
+              loading="lazy"
+            />
+            <img
+              id="img2"
+              src="assets/a2.png"
+              alt="Project Image 2"
+              loading="lazy"
+            />
+            <img
+              id="img3"
+              src="assets/a3.png"
+              alt="Project Image 3"
+              loading="lazy"
+            />
+          </div>
+          <p id="details-description">
+            Click on a project to see more details.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== Testimonial=================================== -->
+
+    <!-- Testimonial Section -->
+    <section id="testimonials" class="testimonial-section">
+      <div class="container py-5">
+        <h2 class="text-center mb-4">What Clients Say</h2>
+        <div
+          id="testimonialCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="3000"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "Reliable, creative, and fast. They helped revamp our website
+                  and it looks amazing now."
+                </p>
+                <h5 class="testimonial-author">Lisa Wong</h5>
+                <p class="testimonial-role">UX Designer</p>
+              </div>
             </div>
-            <p id="details-description">Click on a project to see more details.</p>
-        </div>
-    </div>
-</section>
-
-
-<!-- ============================== Testimonial=================================== -->
-
-<!-- Testimonial Section -->
-<section id="testimonials" class="testimonial-section">
-  <div class="container py-5">
-    <h2 class="text-center mb-4">What Clients Say</h2>
-    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="testimonial-card">
-            <p class="testimonial-text">
-              "Reliable, creative, and fast. They helped revamp our website and it looks amazing now."
-            </p>
-            <h5 class="testimonial-author">Lisa Wong</h5>
-            <p class="testimonial-role">UX Designer</p>
+            <div class="carousel-item">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "The JK Studio team delivered a powerful website that boosted
+                  our engagement by 40%."
+                </p>
+                <h5 class="testimonial-author">Carlos Rivera</h5>
+                <p class="testimonial-role">Marketing Director</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  "They truly understand brand storytelling. Our portfolio now
+                  shines brighter than ever."
+                </p>
+                <h5 class="testimonial-author">Anika Sharma</h5>
+                <p class="testimonial-role">Creative Consultant</p>
+              </div>
+            </div>
           </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        <div class="carousel-item">
-          <div class="testimonial-card">
-            <p class="testimonial-text">
-              "The JK Studio team delivered a powerful website that boosted our engagement by 40%."
-            </p>
-            <h5 class="testimonial-author">Carlos Rivera</h5>
-            <p class="testimonial-role">Marketing Director</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="testimonial-card">
-            <p class="testimonial-text">
-              "They truly understand brand storytelling. Our portfolio now shines brighter than ever."
-            </p>
-            <h5 class="testimonial-author">Anika Sharma</h5>
-            <p class="testimonial-role">Creative Consultant</p>
+      </div>
+    </section>
+
+    <!-- ==========================Client=================================== -->
+
+    <!-- CLIENT SECTION HTML -->
+    <section id="clients" class="client-section py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Our Clients</h2>
+        <div class="logo-carousel">
+          <div class="logo-track">
+            <img
+              src="assets/client-1.png"
+              alt="Client 1"
+              class="client-logo"
+              loading="lazy"
+            />
+            <img
+              src="assets/client-2.png"
+              alt="Client 2"
+              class="client-logo"
+              loading="lazy"
+            />
+            <img
+              src="assets/client-3.png"
+              alt="Client 3"
+              class="client-logo"
+              loading="lazy"
+            />
+            <img
+              src="assets/client-4.png"
+              alt="Client 4"
+              class="client-logo"
+              loading="lazy"
+            />
+            <img
+              src="assets/client-5.png"
+              alt="Client 5"
+              class="client-logo"
+              loading="lazy"
+            />
+            <img
+              src="assets/client-6.png"
+              alt="Client 6"
+              class="client-logo"
+              loading="lazy"
+            />
+            <!-- Repeat once for infinite scroll illusion -->
+            <img
+              src="assets/client-1.png"
+              alt="Client 1 Duplicate"
+              class="client-logo"
+              loading="lazy"
+            />
+            <img
+              src="assets/client-2.png"
+              alt="Client 2 Duplicate"
+              class="client-logo"
+              loading="lazy"
+            />
+            <img
+              src="assets/client-3.png"
+              alt="Client 3 Duplicate"
+              class="client-logo"
+              loading="lazy"
+            />
+            <img
+              src="assets/client-4.png"
+              alt="Client 4 Duplicate"
+              class="client-logo"
+              loading="lazy"
+            />
+            <img
+              src="assets/client-5.png"
+              alt="Client 5 Duplicate"
+              class="client-logo"
+              loading="lazy"
+            />
+            <img
+              src="assets/client-6.png"
+              alt="Client 6 Duplicate"
+              class="client-logo"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <!-- ====================================================== -->
 
-<!-- ==========================Client=================================== -->
-
-<!-- CLIENT SECTION HTML -->
-<section id="clients" class="client-section py-5">
-  <div class="container">
-    <h2 class="text-center mb-5">Our Clients</h2>
-    <div class="logo-carousel">
-      <div class="logo-track">
-        <img src="assets/client-1.png" alt="Client 1" class="client-logo" />
-        <img src="assets/client-2.png" alt="Client 2" class="client-logo" />
-        <img src="assets/client-3.png" alt="Client 3" class="client-logo" />
-        <img src="assets/client-4.png" alt="Client 4" class="client-logo" />
-        <img src="assets/client-5.png" alt="Client 5" class="client-logo" />
-        <img src="assets/client-6.png" alt="Client 6" class="client-logo" />
-        <!-- Repeat once for infinite scroll illusion -->
-        <img src="assets/client-1.png" alt="Client 1 Duplicate" class="client-logo" />
-        <img src="assets/client-2.png" alt="Client 2 Duplicate" class="client-logo" />
-        <img src="assets/client-3.png" alt="Client 3 Duplicate" class="client-logo" />
-        <img src="assets/client-4.png" alt="Client 4 Duplicate" class="client-logo" />
-        <img src="assets/client-5.png" alt="Client 5 Duplicate" class="client-logo" />
-        <img src="assets/client-6.png" alt="Client 6 Duplicate" class="client-logo" />
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ====================================================== -->
-    
-
-<!-- Contact Section -->
-<section id="contact">
-    <h2>Contact Us!</h2>
-    <div class="container">
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Us!</h2>
+      <div class="container">
         <div class="section-contact">
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-10 col-xl-8">
-                    <div class="header-section text-center">
-                        <h2 class="title">Contact 
-                            <span class="hello">JK Studio</span>
-                        </h2>
-                    </div>
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-10 col-xl-8">
+              <div class="header-section text-center">
+                <h2 class="title">
+                  Contact
+                  <span class="hello">JK Studio</span>
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="form-contact">
+            <form id="contactForm">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="single-input">
+                    <i class="fas fa-user"></i>
+                    <input
+                      type="text"
+                      id="Name"
+                      placeholder="YOUR NAME"
+                      required
+                    />
+                  </div>
                 </div>
-            </div>
-            <div class="form-contact">
-                <form id="contactForm">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="single-input">
-                                <i class="fas fa-user"></i>
-                                <input type="text" id="Name" placeholder="YOUR NAME" required>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="single-input">
-                                <i class="fas fa-envelope"></i>
-                                <input type="email" id="Sender" placeholder="YOUR EMAIL" required>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="single-input">
-                                <i class="fas fa-check"></i>
-                                <input type="text" id="Subject" placeholder="SUBJECT" required>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="single-input">
-                                <i id="msg" class="fas fa-comment-dots"></i>
-                                <textarea id="Message" placeholder="YOUR MESSAGE" required></textarea>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="submit-input text-center">
-                                <button type="submit" class="btn btn-contact">SEND MESSAGE</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
+                <div class="col-md-12">
+                  <div class="single-input">
+                    <i class="fas fa-envelope"></i>
+                    <input
+                      type="email"
+                      id="Sender"
+                      placeholder="YOUR EMAIL"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="single-input">
+                    <i class="fas fa-check"></i>
+                    <input
+                      type="text"
+                      id="Subject"
+                      placeholder="SUBJECT"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="single-input">
+                    <i id="msg" class="fas fa-comment-dots"></i>
+                    <textarea
+                      id="Message"
+                      placeholder="YOUR MESSAGE"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="submit-input text-center">
+                    <button type="submit" class="btn btn-contact">
+                      SEND MESSAGE
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
-    </div>
-</section>
-
-
-
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p class="footer-text">&copy; 2025 Jamil Khalil | All Rights Reserved.</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-        </div>
+      <p class="footer-text">&copy; 2025 Jamil Khalil | All Rights Reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
     </footer>
-
-</body>
+  </body>
 </html>

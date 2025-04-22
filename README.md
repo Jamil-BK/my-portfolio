@@ -4,24 +4,18 @@ Welcome to my personal web portfolio built for my Web Design and Development cou
 
 This project showcases my skills in front-end development, animation, responsive design, and version control using Git and GitHub.
 
-
-
 ## Live Website
 
 [View on GitHub Pages](https://jamil-bk.github.io/my-portfolio/)
 
-
-
 ## Sections Included
 
-- Home — Hero banner and welcome animation  
-- About Me — Biography, animated skill bars  
-- Projects — Interactive cards with toggleable project details  
-- Testimonials — Stylish testimonial slider with hover animations  
-- Clients — Continuous animated client logo slider  
+- Home — Hero banner and welcome animation
+- About Me — Biography, animated skill bars
+- Projects — Interactive cards with toggleable project details
+- Testimonials — Stylish testimonial slider with hover animations
+- Clients — Continuous animated client logo slider
 - Contact — Footer contact area (coming soon)
-
-
 
 ## Features Implemented
 
@@ -37,11 +31,11 @@ This project showcases my skills in front-end development, animation, responsive
 
 ## Tech Stack
 
-- HTML5  
-- CSS3  
-- JavaScript (Vanilla)  
-- Bootstrap 5  
-- Git & GitHub  
+- HTML5
+- CSS3
+- JavaScript (Vanilla)
+- Bootstrap 5
+- Git & GitHub
 - VS Code
 
 ---
@@ -49,4 +43,4 @@ This project showcases my skills in front-end development, animation, responsive
 ## Credits
 
 Project developed by **Jamil Khalil**  
-© 2025 – Humber College Web Design Assignment  
+© 2025 – Humber College Web Design Assignment
